@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        .slide-in {
+            animation: slideIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-slate-900">
+    <!-- header -->
+    <header class="bg-white shadow-md fade-in">
+        <div class="flex justify-between items-center py-8 px-4">
+            <div class="text-3xl font-bold text-green-700">
+                My Cab App
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li class="text-red-700 font-bold hover:text-blue-700 cursor-pointer transition-colors duration-300">Home</li>
+                    <li class="text-red-700 font-bold hover:text-blue-700 cursor-pointer transition-colors duration-300">Contacts</li>
+                    <li class="text-red-700 font-bold hover:text-blue-700 cursor-pointer transition-colors duration-300">Service</li>
+                    <li class="text-red-700 font-bold hover:text-blue-700 cursor-pointer transition-colors duration-300">About</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="h-[85vh] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556122071-e404eaedb77f?q=80&w=2034&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+        <div class="flex flex-col justify-center items-center h-full bg-black bg-opacity-50 slide-in">
+            <h1 class="text-5xl font-bold text-white mb-4">
+                Get ride faster
+            </h1>
+            <p class="text-xl text-white mb-6">Your ride is just a tap away</p>
+            <a href="" class="text-lg font-semibold text-white bg-green-700 py-2 px-4 rounded hover:bg-green-600 transition-transform transform hover:scale-105">Ride now</a>
+        </div>
+    </section>
+</body>
+</html>
